@@ -6,7 +6,7 @@ I mean when you use a neovim distribution, it's their configs, not yours, and th
 
 and it's bloated as well lol, well I'm joking, it's not really that bloaty, but compare to my configs or everyone's configs, it's definitely more bloaty.
 
-so I figure it out to just create my own configs watching [theprimeagen's video](https://www.youtube.com/results?search_query=theprimeagen+neovim) of how to configure stuff in neovim from scratch.
+so I figure it out to just create my own configs watching [theprimeagen's video](https://www.youtube.com/watch?v=w7i4amO_zaE) of how to configure stuff in neovim from scratch.
 
 everything works fine, well the video is one year old so some of the configs don't really work but I managed to fix it, but the video still helped me a lot of understanding how to configure neovim myself.
 .
