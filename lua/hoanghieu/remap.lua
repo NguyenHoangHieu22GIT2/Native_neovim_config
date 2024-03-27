@@ -1,7 +1,8 @@
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 
+vim.keymap.set("n", "<leader>ee",function() vim.cmd[[:Neotree toggle]] end)
 
 -- Moving motion
 
@@ -39,7 +40,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<C-s>", function() 
-	vim.cmd[[:%!npx prettier --stdin-filepath %]]
+    vim.lsp.buf.format()
 	vim.cmd(":w")
 end)
 
@@ -59,3 +60,22 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 
+-- Move around panels
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+
+vim.keymap.set('n', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+vim.keymap.set('n', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+vim.keymap.set('n', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+vim.keymap.set('n', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+vim.keymap.set('n', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+
+
+-- Terminal
+
+vim.keymap.set("n",'<C-t>',vim.cmd.ToggleTerm)

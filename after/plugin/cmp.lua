@@ -9,8 +9,8 @@ cmp.setup({
     ['<Space>'] = cmp.mapping.confirm({ select = true }),
     ["<C-z>"] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<C-j>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<C-k>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-p>'] = cmp.mapping(function()
       if cmp.visible() then
         cmp.select_prev_item({behavior = 'insert'})
