@@ -21,16 +21,16 @@ return require('packer').startup(function(use)
   use("mg979/vim-visual-multi")
   use("numToStr/Comment.nvim")
   use("neovim/nvim-lspconfig")
-  use("L3MON4Dj/LuaSnip")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/nvim-cmp")
   use("williamboman/mason-lspconfig.nvim")
   use("williamboman/mason.nvim")
   use("max397574/better-escape.nvim")
-  use("mg979/vim-visual-multi")
   use("nvimtools/none-ls.nvim")
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use("nvim-pack/nvim-spectre")
+  use("akinsho/toggleterm.nvim")
 end)
