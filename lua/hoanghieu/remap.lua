@@ -133,3 +133,9 @@ vim.keymap.set("n", "<C-w><right>", "<C-w>>")
 vim.keymap.set("n", "<C-w><up>", "<C-w>+")
 vim.keymap.set("n", "<C-w><down>", "<C-w>-")
 
+vim.keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+
+

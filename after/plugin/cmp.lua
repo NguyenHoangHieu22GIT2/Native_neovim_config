@@ -2,23 +2,24 @@
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 cmp.setup({
+    snippet = {
+        expand = function(args)
+            -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+            luasnip.lsp_expand(args.body) -- For `luasnip` users.
+        end,
+    },
     sources = {
-        {name = "nvim_lsp"}
+        {name = "nvim_lsp"},
+        {name = "luasnip"}
     },
     mapping = {
-    -- ['<Space>'] = cmp.mapping.confirm({ select = true }),
+    ['<Enter>'] = cmp.mapping.confirm({ select = true }),
      ["<Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-            -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
-            -- this way you will only jump inside the snippet region
-          elseif luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
-          elseif has_words_before() then
-            cmp.complete()
-          else
-            fallback()
-          end
+             cmp.select_next_item()
+             if cmp.visible() then
+         else
+             fallback()
+         end
         end, { "i", "s" }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
