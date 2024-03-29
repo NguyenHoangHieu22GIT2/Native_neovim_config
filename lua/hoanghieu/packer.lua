@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
   }
   use("nvim-pack/nvim-spectre")
   use("akinsho/toggleterm.nvim")
+  use("L3MON4D3/LuaSnip")
 use {
   "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",

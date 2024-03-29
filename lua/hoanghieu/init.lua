@@ -1,4 +1,5 @@
 require('hoanghieu.packer')
+-- require("hoanghieu.lazy")
 require('hoanghieu.remap')
 require('hoanghieu.shared')
 require('hoanghieu.set')

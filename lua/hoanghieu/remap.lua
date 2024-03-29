@@ -1,7 +1,7 @@
 
+
 vim.g.mapleader = " "
--- vim.vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
---
+vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
 vim.keymap.set("n", "<leader>ee",function() vim.cmd[[:Neotree toggle]] end)
 
@@ -53,12 +53,12 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/hoanghieu/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+-- vim.keymap.set("n", "<leader><leader>", function()
+--     vim.cmd("so")
+-- end)
 
 
 -- Move around panels
@@ -80,6 +80,7 @@ vim.keymap.set('n', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 -- Terminal
 
 vim.keymap.set("n",'<C-t>',vim.cmd.ToggleTerm)
+vim.keymap.set("t",'<C-t>',vim.cmd.ToggleTerm)
 
 -- Do things without affecting the registers
 vim.keymap.set("n", "x", '"_x')
@@ -98,10 +99,8 @@ vim.keymap.set("v", "<Leader>D", '"_D')
 -- Increment/decrement
 vim.keymap.set("n", "+", "<C-a>")
 vim.keymap.set("n", "-", "<C-x>")
-
 -- Delete a word backwards
-vim.keymap.set("n", "dw", 'vb"_d')
-
+-- vim.keymap.set("n", "dw", 'vb"_d')
 -- Select all
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
@@ -134,15 +133,3 @@ vim.keymap.set("n", "<C-w><right>", "<C-w>>")
 vim.keymap.set("n", "<C-w><up>", "<C-w>+")
 vim.keymap.set("n", "<C-w><down>", "<C-w>-")
 
--- Diagnostics
-vim.keymap.set("n", "<C-j>", function()
-	vim.diagnostic.goto_next()
-end, opts)
-
-vim.keymap.set("n", "<leader>r", function()
-	require("craftzdog.hsl").replaceHexWithHSL()
-end)
-
-vim.keymap.set("n", "<leader>i", function()
-	require("craftzdog.lsp").toggleInlayHints()
-end)
