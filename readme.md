@@ -15,7 +15,7 @@ everything works fine, well the video is one year old so some of the configs don
 
 one more thing, people say that using neovim is a waste of time because you have to maintain it when new update of plugins arrive. I say not quite true.
 
-Because most of the time, you don't really need to update, you can configure it once and you can go on for like months, or even years if you really don't need all the fancy stuff. But if you just update it everyday then sure things will break ( like for example, the plugins can change their apis, their function name, bla bla bla ). 
+Because most of the time, you don't really need to update, you can configure it once and you can go on for like months, or even years if you really don't need all the fancy stuff. But if you just update it everyday then sure things will break ( like for example, the plugins can change their apis, their function name, bla bla bla ).
 
 so if you really want to create your own neovim's configurations, you should really think about not updating your plugins all the time.
 
@@ -24,3 +24,11 @@ so if you really want to create your own neovim's configurations, you should rea
 That's it, if you want to use my configs, sure, but mine is kinda the same as the primeagen in the video, I did cutomize it to my likings, so if you like it as well then sure, if not then I advise you to create your own :)
 
 Thanks for reading and hope I can see you again.
+
+# Note:
+
+I just fix the missing icons by installing the alpha.nvim because it has the "nvim-dev-icons" dependency, and I also install the "nvim-web-devicons" because it's required by the "nvim-tree" plugin.
+
+Well that's it, I hope you enjoy my configs, and if you have any questions, feel free to ask me.
+
+<button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Facebook</button>

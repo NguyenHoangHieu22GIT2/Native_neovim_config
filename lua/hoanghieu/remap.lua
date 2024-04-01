@@ -3,7 +3,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
-vim.keymap.set("n", "<leader>ee",function() vim.cmd[[:Neotree toggle]] end)
+vim.keymap.set("n", "<leader>e",function() vim.cmd[[:Neotree toggle]] end)
 
 -- Moving motion
 

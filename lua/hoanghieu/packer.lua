@@ -14,6 +14,17 @@ return require('packer').startup(function(use)
   use({ "rose-pine/neovim", as = "rose-pine" ,config = function()
 	  vim.cmd('colorscheme rose-pine')
   end})
+use {
+    'goolord/alpha-nvim',
+    requires = {
+        'nvim-tree/nvim-web-devicons',
+        'nvim-lua/plenary.nvim'
+    },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+}
+  use("m4xshen/autoclose.nvim")
   use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
