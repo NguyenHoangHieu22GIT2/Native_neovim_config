@@ -24,6 +24,7 @@ use {
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
 }
+	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   use("m4xshen/autoclose.nvim")
   use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
   use('ThePrimeagen/harpoon')
