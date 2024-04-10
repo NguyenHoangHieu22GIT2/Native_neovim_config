@@ -3,7 +3,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
-vim.keymap.set("n", "<leader>e",function() vim.cmd[[:Neotree toggle]] end)
+vim.keymap.set("n", "<leader>ee",function() vim.cmd[[:Neotree toggle]] end)
 
 -- Moving motion
 
@@ -12,6 +12,8 @@ vim.keymap.set("n","k","gk")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n","gt","<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n","gT","<cmd>BufferLineCyclePrev<CR>")
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
