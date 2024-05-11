@@ -11,6 +11,5 @@
 -- end
 -- vim.opt.rtp:prepend(lazypath)
 
-
 require('hoanghieu')
 -- require("lazy").setup(plugins, opts)

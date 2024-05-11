@@ -24,6 +24,7 @@ use {
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
 }
+use("folke/zen-mode.nvim")
 use("akinsho/git-conflict.nvim")
 	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   use("m4xshen/autoclose.nvim")
@@ -97,7 +98,7 @@ use {
         popup_border_style = "rounded",
         enable_git_status = true,
         enable_diagnostics = true,
-        enable_normal_mode_for_inputs = false, -- Enable normal mode for input dialogs.
+        neo_tree_popup_input_ready = false, -- Enable normal mode for input dialogs.
         open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes
         sort_case_insensitive = false, -- used when sorting files and directories in the tree
         sort_function = nil , -- use a custom function for sorting files and directories in the tree 

@@ -3,6 +3,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
+vim.keymap.set("n","ga",function() vim.cmd[[:lua vim.lsp.buf.code_action()]] end)
+
 vim.keymap.set("n", "<leader>ee",function() vim.cmd[[:Neotree toggle]] end)
 
 -- Moving motion
@@ -104,7 +106,7 @@ vim.keymap.set("n", "-", "<C-x>")
 -- Delete a word backwards
 -- vim.keymap.set("n", "dw", 'vb"_d')
 -- Select all
-vim.keymap.set("n", "<C-a>", "gg<S-v>G")
+-- vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
@@ -140,4 +142,8 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window 
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
+
+
+-- ZEN MODE
+vim.keymap.set("n","<leader>z","<cmd>ZenMode<cr>")
 
