@@ -8,16 +8,12 @@ cmp.setup({
             luasnip.lsp_expand(args.body) -- For `luasnip` users.
         end,
     },
-    sources = cmp.config.sources({
-      -- Dont suggest Text from nvm_lsp
-      { name = "nvim_lsp",
-      entry_filter = function(entry, ctx)
-        return require("cmp").lsp.CompletionItemKind.Text ~= entry:get_kind()
-      end },
-      {name ="luaSnip"}
-    }),
+    sources = {
+        {name = "nvim_lsp"},
+        {name = "luasnip"}
+    },
     mapping = {
-    ['<Enter>'] = cmp.mapping.confirm({ select = false }),
+    ['<Enter>'] = cmp.mapping.confirm({ select = true }),
      ["<Tab>"] = cmp.mapping(function(fallback)
              cmp.select_next_item()
              if cmp.visible() then
@@ -54,9 +50,9 @@ cmp.setup({
     end),
   },
   snippet = {
-    -- expand = function(args)
-    --   require('luasnip').lsp_expand(args.body)
-    -- end,
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
   },
   
 })
