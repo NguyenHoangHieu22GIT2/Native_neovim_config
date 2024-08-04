@@ -1,6 +1,16 @@
+vim.keymap.set("n","<leader>gs",vim.cmd.Git)
+-- local mark = require("harpoon.mark")
+-- local ui = require("harpoon.ui")
+--
+-- vim.keymap.set("n","<leader>a",mark.add_file)
+-- vim.keymap.set("n","<C-e>",ui.toggle_quick_menu)
+
+-- vim.keymap.set("n","<leader>h",function() ui.nav_file(1) end)
+-- vim.keymap.set("n","<leader>j",function() ui.nav_file(2) end)
+-- vim.keymap.set("n","<leader>k",function() ui.nav_file(3) end)
+-- vim.keymap.set("n","<leader>l",function() ui.nav_file(4) end)
 
 
-vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
 vim.keymap.set("n","ga",function() vim.cmd[[:lua vim.lsp.buf.code_action()]] end)
@@ -45,7 +55,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<C-s>", function() 
-    vim.lsp.buf.format()
+  vim.lsp.buf.format()
 	vim.cmd(":w")
 end)
 
