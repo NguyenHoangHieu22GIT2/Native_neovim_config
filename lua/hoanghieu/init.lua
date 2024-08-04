@@ -1,5 +1,4 @@
 -- require('hoanghieu.packer')
-require("hoanghieu.lazy")
 require("hoanghieu.lsp")
 require('hoanghieu.remap')
 require('hoanghieu.shared')

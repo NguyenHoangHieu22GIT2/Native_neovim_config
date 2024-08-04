@@ -1,20 +1,20 @@
-vim.keymap.set("n","<leader>gs",vim.cmd.Git)
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
-vim.keymap.set("n","ga",function() vim.cmd[[:lua vim.lsp.buf.code_action()]] end)
+vim.keymap.set("n", "ga", function() vim.cmd [[:lua vim.lsp.buf.code_action()]] end)
 
-vim.keymap.set("n", "<leader>ee",function() vim.cmd[[:Neotree toggle]] end)
+vim.keymap.set("n", "<leader>ee", function() vim.cmd [[:Neotree toggle]] end)
 
 -- Moving motion
 
-vim.keymap.set("n","j","gj")
-vim.keymap.set("n","k","gk")
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("n","gt","<cmd>BufferLineCycleNext<CR>")
-vim.keymap.set("n","gT","<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "gt", "<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "gT", "<cmd>BufferLineCyclePrev<CR>")
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -22,30 +22,23 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- vim.keymap.set("n", "<leader>vwm", function()
---     require("vim-with-me").StartVimWithMe()
--- end)
--- vim.keymap.set("n", "<leader>svwm", function()
---     require("vim-with-me").StopVimWithMe()
--- end)
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<C-s>", function() 
+vim.keymap.set("n", "<C-s>", function()
   vim.lsp.buf.format()
-	vim.cmd(":w")
+  vim.cmd(":w")
 end)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -82,8 +75,8 @@ vim.keymap.set('n', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 
 -- Terminal
 
-vim.keymap.set("n",'<C-t>',vim.cmd.ToggleTerm)
-vim.keymap.set("t",'<C-t>',vim.cmd.ToggleTerm)
+vim.keymap.set("n", '<C-t>', vim.cmd.ToggleTerm)
+vim.keymap.set("t", '<C-t>', vim.cmd.ToggleTerm)
 
 -- Do things without affecting the registers
 vim.keymap.set("n", "x", '"_x')
@@ -144,5 +137,4 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increa
 
 
 -- ZEN MODE
-vim.keymap.set("n","<leader>z","<cmd>ZenMode<cr>")
-
+vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<cr>")
