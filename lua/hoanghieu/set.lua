@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 vim.opt.clipboard = "unnamedplus"
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -8,7 +9,6 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = true
-
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
@@ -27,4 +27,3 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.opt.cmdheight = 1
-
