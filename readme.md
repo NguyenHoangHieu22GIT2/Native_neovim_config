@@ -9,9 +9,6 @@ and it's bloated as well lol, well I'm joking, it's not really that bloaty, but 
 so I figure it out to just create my own configs watching [theprimeagen's video](https://www.youtube.com/watch?v=w7i4amO_zaE) of how to configure stuff in neovim from scratch.
 
 everything works fine, well the video is one year old so some of the configs don't really work but I managed to fix it, but the video still helped me a lot of understanding how to configure neovim myself.
-.
-
-everything works fine, well the video is one year old so some of the configs don't really work but I managed to fix it, but the video still helped me a lot of understanding how to configure neovim myself.
 
 one more thing, people say that using neovim is a waste of time because you have to maintain it when new update of plugins arrive. I say not quite true.
 
@@ -31,4 +28,15 @@ I just fix the missing icons by installing the alpha.nvim because it has the "nv
 
 Well that's it, I hope you enjoy my configs, and if you have any questions, feel free to ask me.
 
-<button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Facebook</button>
+---
+
+# Another major update
+
+I switched to Lazy instead of packer :) Just saying that it looks a lot cleaner with its UI and stuff and I am really content with it.
+
+I also refactor some stuff to make it easier to understand and maintain, you can use my configs with ease right now. For people who want to learn how to configure neovim, this is good one to start since it will just work at first, and my codes are just... simple.
+
+--- 
+
+# Contact me
+<a href="https://www.facebook.com/hoanghieufro/" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Facebook</a> - I only have facebook though...
